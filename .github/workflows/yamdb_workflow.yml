@@ -65,7 +65,7 @@ jobs:
           script: |
             sudo docker pull kv1o/practicum-django
             sudo docker-compose stop
-            sudo docker stop ${sudo docker ps -a -q}
+            sudo docker stop $(sudo docker ps -a -q)
             sudo docker-compose rm web
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
