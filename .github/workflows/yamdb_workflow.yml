@@ -18,6 +18,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: inject temporary variables
+        run: |
+          echo DB_ENGINE=test >> .env
+          echo DB_NAME=test >> .env
+          echo POSTGRES_USER=test >> .env
+          echo POSTGRES_PASSWORD=test >> .env
+          echo DB_HOST=test >> .env
+          echo DB_PORT=test >> .env
+          echo DJANGO_SECRET=test >> .env
+          echo SERVER_HOST=test >> .env
+
       - name: check pep8
         run: python -m flake8
 
