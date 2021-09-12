@@ -27,7 +27,7 @@ jobs:
   build_push_dockerhub:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
-    needs: test
+#    needs: test
     steps:
       - uses: actions/checkout@v2
 
