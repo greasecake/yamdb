@@ -1,0 +1,11 @@
+pytest-django
+python-dotenv
+requests
+django
+djangorestframework
+djangorestframework-simplejwt
+django-filter
+flake8
+gunicorn
+importlib-metadata==1.6.0
+psycopg2-binary<2.9
